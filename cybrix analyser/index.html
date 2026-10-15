@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!--
+    PRIVACY LOCK (Content Security Policy)
+    This line tells the browser what this page is allowed to do. In plain English:
+      - only run scripts and styles that ship with this website ('self')
+      - connect-src 'none'  → the page may NOT send data to ANY server, not even its own
+      - form-action 'none'  → forms can never be submitted anywhere
+      - media-src blob:     → audio you load stays on your own computer
+    If any code tried to upload an email, the browser would block it.
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; media-src blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#06070b">
+  <title>Cybrix Phishing Analyser</title>
+  <meta name="description" content="Paste a suspicious email or call transcript and get a private, in-browser phishing analysis. Nothing is uploaded.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!--@@BODY_START@@-->
+<div class="arcade">
+  <!-- ═════════════ TOP BAR ═════════════ -->
+  <header class="topbar">
+    <a class="logo-tile" href="#home" aria-label="Cybrix home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path class="lt-shield" d="M24 4 8 10v11c0 10 6.8 19 16 23 9.2-4 16-13 16-23V10L24 4z"/><path class="lt-mail" d="M15 18h18v13H15z"/><path class="lt-flap" d="m15 18 9 7 9-7"/></svg>
+    </a>
+    <div class="brand-text">
+      <h1>CYBRIX</h1>
+      <p>Phishing Email Analyser</p>
+    </div>
+    <nav class="tabs topnav" role="tablist" aria-label="Sections">
+      <button role="tab" id="tab-home" aria-controls="view-home" aria-selected="true" data-view="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h6v-6h2v6h6v-9h3L12 3z"/></svg><span>Arcade</span></button>
+      <button role="tab" id="tab-analyse" aria-controls="view-analyse" aria-selected="false" data-view="analyse"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4a7 7 0 1 0 4.4 12.4l4.3 4.3 1.4-1.4-4.3-4.3A7 7 0 0 0 11 4zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/></svg><span>Analyse</span></button>
+      <button role="tab" id="tab-challenge" aria-controls="view-challenge" aria-selected="false" data-view="challenge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg><span>Challenge</span></button>
+      <button role="tab" id="tab-training" aria-controls="view-training" aria-selected="false" data-view="training"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4V5zm16 0h-4a3 3 0 0 0-1 .2V19a2 2 0 0 1 1-.5h4V5z"/></svg><span>Training</span></button>
+      <button role="tab" id="tab-dashboard" aria-controls="view-dashboard" aria-selected="false" data-view="dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10h3v10H4zm6 0V4h3v16h-3zm6 0v-7h3v7h-3z"/></svg><span>Dashboard</span></button>
+      <button role="tab" id="tab-about" aria-controls="view-about" aria-selected="false" data-view="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm0 2.2 6 2.2V11c0 3.9-2.5 7.6-6 8.9-3.5-1.3-6-5-6-8.9V6.4l6-2.2z"/></svg><span>Privacy</span></button>
+    </nav>
+    <p class="offline-chip" title="The page's security policy blocks every connection to outside servers."><span class="dot" aria-hidden="true"></span>Offline · 0 uploads</p>
+  </header>
+
+  <main class="stage">
+  <!-- ═════════════ ARCADE HOME ═════════════ -->
+  <section class="view" id="view-home" role="tabpanel" aria-labelledby="tab-home">
+    <div class="home-grid">
+      <div class="home-main">
+        <section class="panel featured" aria-labelledby="featured-title">
+          <h2 class="panel-title" id="featured-title">Featured Games</h2>
+          <div class="games">
+            <article class="game g-purple">
+              <svg class="game-art" viewBox="0 0 120 100" aria-hidden="true">
+                <defs><linearGradient id="hookG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><linearGradient id="hookEnv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f3ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+                <path d="M58 4v34" stroke="url(#hookG)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M58 38c0 16-24 16-24 2" fill="none" stroke="url(#hookG)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M34 40l-6-9" stroke="url(#hookG)" stroke-width="6" stroke-linecap="round"/>
+                <g transform="rotate(-10 62 70)"><rect x="30" y="50" width="64" height="44" rx="5" fill="url(#hookEnv)"/><path d="m31 53 31 22 31-22" fill="none" stroke="#6d28d9" stroke-width="3.5"/></g>
+              </svg>
+              <h3>Phish or Legit</h3>
+              <p class="game-sub" id="game-sub-challenge">12 messages</p>
+              <button type="button" class="play" data-go="challenge">Play</button>
+            </article>
+            <article class="game g-blue">
+              <svg class="game-art" viewBox="0 0 120 100" aria-hidden="true">
+                <defs><linearGradient id="shG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient></defs>
+                <path d="M60 6 26 18v24c0 22 14 40 34 50 20-10 34-28 34-50V18L60 6z" fill="url(#shG)" stroke="#93c5fd" stroke-width="2"/>
+                <path d="M60 22 40 29v14c0 13 8 24 20 30 12-6 20-17 20-30V29L60 22z" fill="none" stroke="#bfdbfe" stroke-width="3" opacity=".8"/>
+                <path d="M50 38h20M50 38v14h10M70 46v10H56" fill="none" stroke="#dbeafe" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+                <circle cx="60" cy="46" r="4" fill="#fb923c"/>
+              </svg>
+              <h3>Shield Academy</h3>
+              <p class="game-sub" id="game-sub-training">9 lessons</p>
+              <button type="button" class="play" data-go="training">Play</button>
+            </article>
+            <article class="game g-orange">
+              <svg class="game-art" viewBox="0 0 120 100" aria-hidden="true">
+                <defs><linearGradient id="envG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5e7eb"/><stop offset="1" stop-color="#6b7280"/></linearGradient><linearGradient id="letG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdba74"/><stop offset="1" stop-color="#ea580c"/></linearGradient></defs>
+                <rect x="30" y="14" width="46" height="40" rx="3" fill="url(#letG)"/>
+                <path d="M37 24h32M37 32h32M37 40h20" stroke="#fff7ed" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+                <path d="M18 40h70v44H18z" fill="url(#envG)"/>
+                <path d="m18 40 35 26 35-26" fill="none" stroke="#9ca3af" stroke-width="3"/>
+                <circle cx="84" cy="66" r="15" fill="rgba(147,197,253,.35)" stroke="#111827" stroke-width="6"/>
+                <path d="m95 77 13 13" stroke="#111827" stroke-width="9" stroke-linecap="round"/>
+              </svg>
+              <h3>Inbox Detective</h3>
+              <p class="game-sub">Analyse a real message</p>
+              <button type="button" class="play" data-go="analyse">Play</button>
+            </article>
+            <article class="game g-cyan">
+              <svg class="game-art" viewBox="0 0 120 100" aria-hidden="true">
+                <defs><linearGradient id="trG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a5f3fc"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs>
+                <path d="M40 12h40v22c0 13-9 22-20 22s-20-9-20-22V12z" fill="url(#trG)"/>
+                <path d="M40 18H26c0 14 7 20 15 21M80 18h14c0 14-7 20-15 21" fill="none" stroke="#67e8f9" stroke-width="4"/>
+                <path d="M54 56h12v14H54z" fill="#0891b2"/>
+                <rect x="40" y="70" width="40" height="12" rx="3" fill="#164e63" stroke="#67e8f9" stroke-width="2"/>
+                <path d="m60 22 3.5 7 7.5 1-5.5 5 1.5 7.5L60 39l-7 3.5 1.5-7.5-5.5-5 7.5-1z" fill="#ecfeff"/>
+              </svg>
+              <h3>Team Arena</h3>
+              <p class="game-sub">Leaderboard &amp; dashboard</p>
+              <button type="button" class="play" data-go="dashboard">Play</button>
+            </article>
+            <article class="game g-green">
+              <svg class="game-art" viewBox="0 0 120 100" aria-hidden="true">
+                <defs><linearGradient id="phG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#86efac"/><stop offset="1" stop-color="#15803d"/></linearGradient></defs>
+                <path d="M34 22c6-6 12-6 16 0l6 9c3 5 1 9-4 12l-4 3c4 9 11 16 20 20l3-4c3-5 7-7 12-4l9 6c6 4 6 10 0 16l-5 5c-8 8-36-4-52-20S26 30 34 22z" fill="url(#phG)"/>
+                <path d="M74 20a22 22 0 0 1 22 22M74 30a12 12 0 0 1 12 12" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="96" cy="18" r="9" fill="#ef4444"/><path d="M96 13v6M96 22v1" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <h3>Call Screener</h3>
+              <p class="game-sub">Spot a vishing call</p>
+              <button type="button" class="play" data-go="voice">Play</button>
+            </article>
+          </div>
+        </section>
+
+        <div class="home-lower">
+          <section class="panel leaderboard" aria-labelledby="lb-title">
+            <div class="panel-head"><h2 class="panel-title" id="lb-title">Leaderboard</h2><span class="pill-select">Team</span></div>
+            <ol class="lb-list" id="lb-list"></ol>
+          </section>
+          <section class="panel stats" aria-label="Your activity">
+            <div class="stat s-purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10a5 5 0 0 1 4.9 6l-1 4a2.5 2.5 0 0 1-4.3 1L14 15h-4l-2.6 3a2.5 2.5 0 0 1-4.3-1l-1-4A5 5 0 0 1 7 7zm1 3v2H6v1h2v2h1v-2h2v-1H9v-2H8zm8 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg><b id="st-played">0</b><span>Games Played</span></div>
+            <div class="stat s-orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h4v3a5 5 0 0 1-4.6 5A5 5 0 0 1 13 15.9V18h3v3H8v-3h3v-2.1A5 5 0 0 1 7.6 13 5 5 0 0 1 3 8V5h4V3zm-2 4v1a3 3 0 0 0 2 2.8V7H5zm12 0v3.8A3 3 0 0 0 19 8V7h-2z"/></svg><b id="st-won">0</b><span>Challenges Won</span></div>
+            <div class="stat s-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18v2H3v-2zm1-4h3v3H4v-3zm5-4h3v7H9v-7zm5-3h3v10h-3V9zm5-5v2.6l-4.3 4.3-3-3L6 17.6 4.6 16.2 11.7 9l3 3L18.6 8H16V4h3z"/></svg><b id="st-acc">–</b><span>Accuracy</span></div>
+          </section>
+        </div>
+      </div>
+
+      <aside class="home-side">
+        <section class="panel progress" aria-labelledby="pr-title">
+          <h2 class="panel-title" id="pr-title">Your Progress</h2>
+          <div class="level-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" class="ring-track"/><circle cx="60" cy="60" r="50" class="ring-fill" id="ring-fill" pathLength="100" stroke-dasharray="0 100"/></svg>
+            <div class="level-text"><span>Level</span><b id="pr-level">1</b></div>
+          </div>
+          <p class="xp-label">XP Earned</p>
+          <p class="xp-num"><b id="pr-xp">0</b> <span id="pr-xp-next">/ 500</span></p>
+          <div class="xp-bar"><div class="xp-fill" id="pr-xp-fill"></div></div>
+          <p class="xp-label">Badges Earned <span id="pr-badge-count"></span></p>
+          <ul class="badges" id="pr-badges"></ul>
+          <p class="xp-label">Awareness score</p>
+          <p class="xp-num"><b id="pr-score">–</b> <span id="pr-grade"></span></p>
+        </section>
+        <section class="panel mission" aria-labelledby="ms-title">
+          <h2 class="panel-title" id="ms-title">Next Mission</h2>
+          <p class="mission-name" id="ms-name">Take the challenge</p>
+          <p class="mission-why" id="ms-why">Find out which phishing tricks you miss.</p>
+          <button type="button" class="play wide" id="ms-go">Start</button>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <section class="view" id="view-analyse" role="tabpanel" aria-labelledby="tab-analyse" hidden>
+    <header class="stage-head">
+      <div>
+        <h2 class="stage-title">Analyse a message</h2>
+        <p class="stage-sub">Paste an email, drop an .eml file, or pick an example</p>
+      </div>
+      <div class="head-actions">
+        <button type="button" class="play-pill" id="head-analyse"><span>ANALYSE</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></button>
+        <button type="button" class="round-btn" id="head-copy" aria-label="Copy IOCs" title="Copy IOCs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h9a2 2 0 0 1 2 2v12h-2V5H8V3zM5 7h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 2v11h9V9H5z"/></svg></button>
+        <button type="button" class="round-btn" id="head-download" aria-label="Download report" title="Download report"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4l-5.7-5.7 1.4-1.4 3.3 3.3V3zM4 18h16v2H4z"/></svg></button>
+      </div>
+    </header>
+
+    <div class="hero-row" id="hero-row" aria-label="Summary of the current analysis"></div>
+
+    <h3 class="row-title">Popular examples</h3>
+    <div class="pop-row" id="pop-row"></div>
+
+    <h3 class="row-title" id="workbench-title">Your message and full report</h3>
+    <div class="workbench">
+      <div class="input-panel">
+        <div class="seg" role="radiogroup" aria-label="What are you analysing?">
+          <button type="button" role="radio" aria-checked="true" data-mode="email" id="mode-email">Email / message</button>
+          <button type="button" role="radio" aria-checked="false" data-mode="voice" id="mode-voice">Voice call</button>
+        </div>
+
+        <div id="voice-tools" class="voice-tools" hidden>
+          <label class="file-btn" for="audio-file">Load a recording (stays on this device)</label>
+          <input type="file" id="audio-file" accept="audio/*" class="visually-hidden">
+          <audio id="audio-player" controls hidden></audio>
+          <p class="hint">Play the recording and type or paste what the caller said below. Automatic transcription is switched off on purpose: the speech recognition built into browsers sends audio to Google or Apple servers, which would break this tool's privacy promise.</p>
+        </div>
+
+        <!-- Import a real email: the file is read on this device only, never uploaded -->
+        <div id="import-zone" class="import-zone">
+          <div class="import-head">
+            <div>
+              <h2 class="import-title">Analyse a real email</h2>
+              <p class="hint">Drop an <code>.eml</code> email, an HTML file or a QR-code image <b>anywhere on the page</b>, or paste raw email source or a QR screenshot into the box below. You get the real headers, real link destinations, attachment names and any QR-code links.</p>
+            </div>
+            <div class="import-btns">
+              <label class="btn small" for="eml-file">Open .eml file</label>
+              <input type="file" id="eml-file" accept=".eml,message/rfc822,.txt" class="visually-hidden">
+              <label class="btn small" for="qr-file">Scan QR image</label>
+              <input type="file" id="qr-file" accept="image/*" class="visually-hidden">
+            </div>
+          </div>
+          <p id="import-status" class="import-status" role="status" hidden></p>
+          <details class="howto">
+            <summary>How do I get the email file from my inbox?</summary>
+            <dl>
+              <dt>Gmail</dt>
+              <dd>Open the email → <b>⋮ More</b> (top right of the message) → <b>Download message</b>. Or <b>Show original</b> → <b>Copy to clipboard</b> and paste it into the box below.</dd>
+              <dt>Outlook on the web / new Outlook</dt>
+              <dd>Open the email → <b>⋯</b> → <b>Save</b> / <b>Download</b> (saves an .eml file).</dd>
+              <dt>Classic Outlook for Windows</dt>
+              <dd>Drag-and-drop saves a <code>.msg</code> file, which isn't supported. Open the email → <b>File → Properties</b>, copy the <b>Internet headers</b>, and paste them above the message text in the box below.</dd>
+              <dt>Apple Mail</dt>
+              <dd>Select the email → <b>File → Save As</b> → Format: <b>Raw Message Source</b>, or drag it to your desktop.</dd>
+              <dt>Thunderbird</dt>
+              <dd>Open the email → <b>⋯ / File → Save As → File</b> (.eml).</dd>
+              <dt>Yahoo Mail</dt>
+              <dd>Open the email → <b>⋯</b> → <b>View raw message</b>, copy everything and paste it below.</dd>
+            </dl>
+            <p class="hint">Why not just log in to your mailbox? A web page asking for your email password is exactly what phishing looks like. A safe direct connection needs OAuth sign-in and a server, which this private, server-free version deliberately avoids. Opening a saved email is completely safe here: attachments are never opened, and links are never visited.</p>
+          </details>
+        </div>
+
+        <label for="email-input" class="field-label" id="input-label">Paste the suspicious email: headers, body, links and attachment names</label>
+        <textarea id="email-input" spellcheck="false" placeholder="Tip: include the From / Reply-To lines and full headers if you have them. You can also paste HTML source."></textarea>
+
+        <div class="input-actions">
+          <button type="button" class="btn primary" id="analyse-btn">Analyse Email</button>
+          <button type="button" class="btn ghost" id="clear-btn">Clear</button>
+          <label class="examples">
+            <span class="visually-hidden">Load an example</span>
+            <select id="example-select">
+              <option value="">Try an example…</option>
+            </select>
+          </label>
+        </div>
+        <label class="check"><input type="checkbox" id="save-history" checked> Add an anonymous summary (score and warning-sign names only, never the text) to my dashboard in this browser</label>
+      </div>
+
+      <div class="report" id="report" aria-live="polite">
+        <div class="empty-state" id="empty-state">
+          <h2>What this checks</h2>
+          <ul class="check-list">
+            <li><b>Language</b>: urgency, threats, requests for passwords, MFA codes, payments, gift cards and bank-detail changes</li>
+            <li><b>Links</b>: look-alike domains, shortened links, raw IP addresses, "@" tricks, hidden redirect destinations and link text that lies about its destination</li>
+            <li><b>QR codes</b>: links hidden in QR images (quishing), read on this device and never opened</li>
+            <li><b>Look-alike letters</b>: Unicode homographs such as a Cyrillic "а" in "pаypal.com", plus invisible characters</li>
+            <li><b>HTML tricks</b>: fill-in forms, automatic redirects, hidden text and HTML attachments</li>
+            <li><b>Attachments</b>: executables, double extensions, macro documents and "Enable Content" requests</li>
+            <li><b>Sender</b>: SPF/DKIM/DMARC failures, Reply-To mismatches and fake display names</li>
+            <li><b>Voice calls</b>: impersonated banks and IT staff, "safe accounts" and remote-access requests</li>
+          </ul>
+          <p class="hint">Pick an example from the menu to see a full report.</p>
+        </div>
+        <div id="report-body" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════ CHALLENGE ═════════════ -->
+  <section class="view" id="view-challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
+    <div class="view-head">
+      <div>
+        <h2>Phishing awareness challenge</h2>
+        <p class="lede">Twelve real-world style messages. Decide whether each is phishing, then tick the red flags you spotted. Your results build your personal awareness score.</p>
+      </div>
+      <div class="score-pill" id="challenge-progress">0 / 12</div>
+    </div>
+    <div id="challenge-area"></div>
+  </section>
+
+  <!-- ═════════════ TRAINING ═════════════ -->
+  <section class="view" id="view-training" role="tabpanel" aria-labelledby="tab-training" hidden>
+    <div class="view-head">
+      <div>
+        <h2>Your training plan</h2>
+        <p class="lede">Lessons are ordered by what you need most, based on your challenge answers and the messages you have analysed.</p>
+      </div>
+      <div class="score-pill" id="training-progress">0 / 9 complete</div>
+    </div>
+    <div id="training-area" class="training-list"></div>
+  </section>
+
+  <!-- ═════════════ DASHBOARD ═════════════ -->
+  <section class="view" id="view-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" hidden>
+    <div class="view-head">
+      <div>
+        <h2>Security awareness dashboard</h2>
+        <p class="lede">Everything here is calculated from data stored only in this browser. Team results are loaded from files people share with you and never leave your computer.</p>
+      </div>
+    </div>
+    <div id="dashboard-area"></div>
+  </section>
+
+  <!-- ═════════════ ABOUT ═════════════ -->
+  <section class="view prose" id="view-about" role="tabpanel" aria-labelledby="tab-about" hidden>
+    <h2>Privacy &amp; how it works</h2>
+    <h3>Your email never leaves this page</h3>
+    <p>All analysis is done by JavaScript running inside your browser tab. There is no server, no AI service, no analytics and no tracking. The page includes a <em>Content Security Policy</em> that forbids it from connecting to any server at all, so even a bug could not upload your text.</p>
+    <p>You can check this yourself: open your browser's developer tools (F12), go to the <b>Network</b> tab, and click <b>Analyse</b>. No new requests appear. You can also disconnect from the internet and the analyser keeps working.</p>
+    <h3>What is stored</h3>
+    <p>If you leave the checkbox ticked, the analyser saves a small summary of each analysis in your browser's local storage: the date, the score, and the names of the warning signs. It never saves the message itself. Challenge answers and training progress are stored the same way. Use the button below to delete all of it.</p>
+    <p><button type="button" class="btn danger" id="wipe-btn">Delete all data stored by this site</button> <span id="wipe-status" class="hint" role="status"></span></p>
+    <h3>How the score works</h3>
+    <p>Each warning sign has a weight that reflects how strongly it predicts phishing. A password request counts far more than a generic greeting. Signs that are much more dangerous together, such as a credential request plus a fake link, add a bonus.</p>
+    <p><b>Evidence is counted once.</b> Several rules can fire on the same evidence, so the score counts independent evidence, not rule hits. Words already matched by a stronger rule are not counted again. Each link and each file counts once: its strongest problem in full, other problems with the same link or file add 25%, and extra suspicious links or files add half. Related checks, such as SPF, DKIM and DMARC or urgency and threats, add a reduced share after the strongest one. Words inside links and email addresses are not treated as message text. The risk score (0–100) is then shared out between the counted warning signs in proportion to their evidence, so the numbers shown next to the reasons always add up to exactly the risk score.</p>
+    <p>The total is converted to a 0–100 scale: <b>Low</b> (0–19), <b>Medium</b> (20–44), <b>High</b> (45–69), <b>Critical</b> (70–100).</p>
+    <h3>QR codes, HTML and look-alike letters</h3>
+    <p><b>QR codes</b> are read from images on your own device, using the browser's built-in reader where available or the small open-source jsQR reader bundled with this site (Apache-2.0 licence). The decoded link is checked like any other link and is never opened. <b>HTML</b> is only ever read as text: forms, redirects, frames and hidden text are reported, but nothing in it is run or loaded. <b>Look-alike letters</b> are found by decoding international domain names and comparing each letter with the English letter it imitates. A domain is not flagged just for using another language's letters, only for mixing alphabets or imitating a brand.</p>
+    <h3>Limits</h3>
+    <p>This is a rule-based teaching tool, not a security product. It can miss well-crafted attacks and can flag legitimate messages. It never visits links, so it cannot see what a website actually contains. A low score is not proof that a message is safe. When in doubt, verify through a channel you trust and report it to your security team.</p>
+  </section>
+  </main>
+
+  <!-- ═════════════ PLAYER BAR: the current analysis ═════════════ -->
+</div>
+
+<div class="drop-overlay" id="drop-overlay" hidden>
+  <div class="drop-card">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4l-5.7-5.7 1.4-1.4 3.3 3.3V3zM4 18h16v2H4z"/></svg>
+    <b>Drop to analyse on this device</b>
+    <span>.eml email · HTML file · QR-code image. Nothing is uploaded.</span>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<!--@@BODY_END@@-->
+<script src="js/rules.js"></script>
+<script src="js/homograph.js"></script>
+<script src="js/analyser.js"></script>
+<script src="js/guidance.js"></script>
+<script src="js/content.js"></script>
+<script src="js/eml.js"></script>
+<script src="js/vendor/jsQR.js"></script>
+<script src="js/qr.js"></script>
+<script src="js/core.js"></script>
+<script src="js/app.js"></script>
+<script src="js/learn.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/arcade.js"></script>
+</body>
+</html>

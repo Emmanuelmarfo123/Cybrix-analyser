@@ -1,0 +1,80 @@
+From: Nana <nana@example.org>
+To: phishing-reports@example.org
+Subject: FW: suspicious email
+Date: Tue, 6 Oct 2026 18:30:00 +0200
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="RPT"
+
+--RPT
+Content-Type: text/plain; charset=utf-8
+
+Hi SOC, this looks suspicious, see attached.
+
+--RPT
+Content-Type: message/rfc822
+Content-Disposition: attachment; filename="original.eml"
+
+Delivered-To: nana@example.org
+Received: from mail.paypa1-security.top (mail.paypa1-security.top [203.0.113.77])
+        by mx.example.org with ESMTPS id abc123
+        for <nana@example.org>; Tue, 06 Oct 2026 09:12:03 -0700 (PDT)
+Authentication-Results: mx.example.org;
+       spf=fail (domain of service@paypa1-security.top does not designate 203.0.113.77 as permitted sender) smtp.mailfrom=service@paypa1-security.top;
+       dkim=fail header.d=paypa1-security.top;
+       dmarc=fail (p=REJECT sp=REJECT dis=QUARANTINE) header.from=paypa1-security.top
+Return-Path: <bounce@mailer-cloud.example>
+From: =?UTF-8?Q?PayPal_Service?= <service@paypa1-security.top>
+Reply-To: support-desk@account-help.click
+To: nana@example.org
+Subject: =?UTF-8?B?4pqgIElociBLb250byB3aXJkIGdlc3BlcnJ0IOKAkyBBY3Rpb24gcmVxdWlyZWQ=?=
+Date: Tue, 6 Oct 2026 18:12:00 +0200
+Message-ID: <0001@paypa1-security.top>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==OUTER=="
+
+This is a multi-part message in MIME format.
+--==OUTER==
+Content-Type: multipart/alternative; boundary="==ALT=="
+
+--==ALT==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+We detected unusual sign-in activity on your account. Your account will be =
+suspended within 24 hours unless you verify your account.
+Visit https://www.paypal.com/signin to verify. Caf=C3=A9 =E2=80=93 S=C3=A9c=
+urit=C3=A9
+
+--==ALT==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGJvZHk+PHA+RGVhciBDdXN0b21lciw8L3A+CjxwPldlIGRldGVjdGVkIHVudXN1YWwg
+c2lnbi1pbiBhY3Rpdml0eSBvbiB5b3VyIGFjY291bnQuIFlvdXIgYWNjb3VudCB3aWxsIGJlIHN1
+c3BlbmRlZCB3aXRoaW4gMjQgaG91cnMgdW5sZXNzIHlvdSB2ZXJpZnkgeW91ciBhY2NvdW50Ljwv
+cD4KPHA+PGEgaHJlZj0iaHR0cDovLzE5OC41MS4xMDAuMjMvcGF5cGFsL3NpZ25pbi5waHAiPmh0
+dHBzOi8vd3d3LnBheXBhbC5jb20vc2lnbmluPC9hPjwvcD4KPHA+PGEgaHJlZj0iaHR0cHM6Ly9i
+aXQubHkvM3BQYWxWZXJpZnkiPjxpbWcgc3JjPSJodHRwczovL2V2aWwuZXhhbXBsZS9sb2dvLnBu
+ZyI+PC9hPjwvcD4KPHA+UGF5UGFsIFNlY3VyaXR5IFRlYW08L3A+PC9ib2R5PjwvaHRtbD4=
+
+--==ALT==--
+
+--==OUTER==
+Content-Type: application/vnd.ms-word.document.macroEnabled.12
+Content-Disposition: attachment;
+ filename*=UTF-8''Rechnung%20%C3%BCberf%C3%A4llig.docm
+Content-Transfer-Encoding: base64
+
+UEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BLAwQgZmFrZSBkb2NtIGJ5
+dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BLAwQgZmFrZSBkb2Nt
+IGJ5dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BLAwQgZmFrZSBk
+b2NtIGJ5dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BLAwQgZmFr
+ZSBkb2NtIGJ5dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BLAwQg
+ZmFrZSBkb2NtIGJ5dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRlc1BL
+AwQgZmFrZSBkb2NtIGJ5dGVzUEsDBCBmYWtlIGRvY20gYnl0ZXNQSwMEIGZha2UgZG9jbSBieXRl
+cw==
+
+--==OUTER==--
+
+--RPT--

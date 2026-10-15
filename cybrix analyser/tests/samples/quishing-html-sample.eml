@@ -1,0 +1,71 @@
+From: "IT Service Desk" <it-support@contoso-helpdesk.click>
+To: nana@example.org
+Subject: =?UTF-8?B?TWFpbGJveCBzdG9yYWdlIGZ1bGwg4oCTIGFjdGlvbiByZXF1aXJlZA==?=
+Date: Wed, 14 Oct 2026 09:00:00 +0200
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="MIX"
+
+--MIX
+Content-Type: multipart/related; boundary="REL"
+
+--REL
+Content-Type: multipart/alternative; boundary="ALT"
+
+--ALT
+Content-Type: text/plain; charset=utf-8
+
+Dear colleague,
+Your mailbox is fine. No action needed.
+
+--ALT
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGJvZHk+CjxwPkRlYXIgY29sbGVhZ3VlLDwvcD4KPHA+WW91ciBtYWlsYm94IHN0b3Jh
+Z2UgaXMgZnVsbC4gU2NhbiB0aGUgUVIgY29kZSBiZWxvdyB3aXRoIHlvdXIgcGhvbmUgd2l0aGlu
+IDI0IGhvdXJzIHRvIGtlZXAgcmVjZWl2aW5nIGVtYWlsLjwvcD4KPHA+PGltZyBzcmM9ImNpZDpx
+cjAwMSIgYWx0PSJRUiI+PC9wPgo8cD5PciB2aXNpdCA8YSBocmVmPSJodHRwczovL3NhZmVsaW5r
+cy5leGFtcGxlLXJlZGlyZWN0LnRvcC9yP3U9aHR0cHMlM0ElMkYlMkZtMzY1LW1haWxib3gtdmVy
+aWZ5LmNsaWNrJTJGbG9naW4iPmh0dHBzOi8vcG9ydGFsLm9mZmljZS5jb20vc3RvcmFnZTwvYT48
+L3A+CjxwPlNpZ25lZCwgPHNwYW4gc3R5bGU9ImRpc3BsYXk6bm9uZSI+aW52b2ljZSByZWNlaXB0
+IG5ld3NsZXR0ZXIgbWVldGluZyBhZ2VuZGE8L3NwYW4+SVQgU2VydmljZSBEZXNrPC9wPgo8cD5N
+aWNyb3NvZnQgYWNjb3VudDogPGEgaHJlZj0iaHR0cHM6Ly94bi0tcHlwYWwtNHZlLmNvbS9zaWdu
+aW4iPmh0dHBzOi8veG4tLXB5cGFsLTR2ZS5jb20vc2lnbmluPC9hPjwvcD4KPC9ib2R5PjwvaHRt
+bD4=
+
+--ALT--
+
+--REL
+Content-Type: image/png; name="qr.png"
+Content-Transfer-Encoding: base64
+Content-ID: <qr001>
+Content-Disposition: inline; filename="qr.png"
+
+iVBORw0KGgoAAAANSUhEUgAAATgAAAE4AQAAAADnBNLHAAACD0lEQVR4nO1a0W7jMAwjD/n/X+Ye
+SDkecOsGHK5SBrvo5jYEEgqyTVGl8KPx52ewgzu4g3sj7gJAT0UBIFRvqq7M59EZPwhwFBMxkYKg
+7cp0Hr040pkmJAVF0BHNlWfw6MWJZDKOK/necN8n465tTkBewoKn/+++vwXn+Gn99Rkiv3Dn4HQe
+XThIFSL95bUw03l04fY1at0iVtzO+v1+UAC1S0Ba/yHTbIfTeXTufyKcdNbNFEQg4jmnyXQe/bgE
+yueudC/jo59fjAtew46Vq49V0SUhO5/vETgi1YZcfnyq3nxAP4JHH46iSNg1gOhzJYbCgOcbjdO+
+ZqkqfIU4Cd3PNxnHcljuDVDRNKnn/Hk6j06c40T/vwUgJBsJZ//7elT9G8fAX7Ks1HioJ/++HBfg
+PU82nHMAZyUvFT2eR2v99ln+lQdYBv7Z/16MC978HKkqhbnyrpog03l0+wcq3+U2XaoGVufzPQPH
+LFuuwo2OnOrLZ/DowgmkQEp2YJJ6d/vyITyacCzXBWBal6lJmJr4GTwacLvHzCUBFe23pOB4Hq3+
+ladK35xlH+zRnc6jVT9XDczyEeLEbB3g6Tx667dq+ZLSUn/c9fR0Hr3xy1g/GKoWCFYwp/OYgHO3
+jTFQcwDr1B+vxv77A9Rxe/c0VYp6Oo9e/8VzQqwl7JJuyZfxPCbov3fe9+AO7uD+HfcBnPzufKQ7
+9SMAAAAASUVORK5CYII=
+
+--REL--
+
+--MIX
+Content-Type: text/html; name="Storage_Upgrade.html"
+Content-Disposition: attachment; filename="Storage_Upgrade.html"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0icmVmcmVzaCIgY29udGVudD0iNTt1cmw9aHR0
+cHM6Ly9tMzY1LW1haWxib3gtdmVyaWZ5LmNsaWNrL2RvbmUiPjwvaGVhZD48Ym9keT4KPGgyPk1p
+Y3LQvnNvZnQgMzY1IHNpZ24gaW48L2gyPgo8Zm9ybSBhY3Rpb249Imh0dHBzOi8vY29sbGVjdG9y
+Lm0zNjUtbWFpbGJveC12ZXJpZnkuY2xpY2svcG9zdC5waHAiIG1ldGhvZD0icG9zdCI+CjxpbnB1
+dCB0eXBlPSJlbWFpbCIgbmFtZT0ibG9naW4iIHBsYWNlaG9sZGVyPSJFbWFpbCI+PGlucHV0IHR5
+cGU9InBhc3N3b3JkIiBuYW1lPSJwYXNzd2QiPjxidXR0b24+U2lnbiBpbjwvYnV0dG9uPjwvZm9y
+bT4KPC9ib2R5PjwvaHRtbD4=
+
+--MIX--

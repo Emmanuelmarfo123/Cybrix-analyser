@@ -1,0 +1,15 @@
+Return-Path: <noreply@github.com>
+Authentication-Results: mx.example.org; spf=pass smtp.mailfrom=github.com; dkim=pass header.d=github.com; dmarc=pass header.from=github.com
+From: GitHub <noreply@github.com>
+To: nana@example.org
+Subject: Your monthly summary
+Date: Tue, 6 Oct 2026 08:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGJvZHk+PHA+SGkgTmFuYSw8L3A+PHA+WW91ciBTZXB0ZW1iZXIgc3RhdGVtZW50IGlz
+IHJlYWR5LiBGb3IgeW91ciBzZWN1cml0eSB3ZSBuZXZlciBpbmNsdWRlIGxvZ2luIGxpbmtzLiBP
+cGVuIHRoZSBhcHAgdG8gdmlldyBpdC48L3A+PHA+PGEgaHJlZj0iaHR0cHM6Ly93d3cuZ2l0aHVi
+LmNvbS9zZXR0aW5ncyI+TWFuYWdlIG5vdGlmaWNhdGlvbiBzZXR0aW5nczwvYT48L3A+PC9ib2R5
+PjwvaHRtbD4=
